@@ -13,12 +13,21 @@ import com.dujay.jvm.file.ClassFile;
 import com.dujay.jvm.methods.builders.MethodPoolBuilder;
 import com.dujay.jvm_language.utils.Either;
 
+/**
+ * The main code generator class that handles the semantic result.
+ * @author nick
+ */
 public class CodeGenerator {
 
   public CodeGenerator() {
 
   }
 
+  /**
+   * Simply copying the example program given in the jvm_backend project, but with
+   * an Either result.
+   * @return
+   */
   public Either<Void, Exception> generate() {
     try {
       ClassFile f = new ClassFile("Test", AccessFlag.PUBLIC, AccessFlag.SUPER,
